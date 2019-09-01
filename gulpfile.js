@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
+const del = require('del');
 const dir = {
     src: 'www/site/public/',
     build: 'www/build/'
@@ -18,9 +19,14 @@ const bsp =
         gulp.watch(dir.src + 'assets/js/*.js').on('change', browserSync.reload);
     };
 
+gulp.task('clean', () => {
+    return del([dir.build]);
+});
+
 gulp.task('default', gulp.parallel(
     gulp.series(bsp)
 ));
 
+exports.clean = 'clean';
 exports.bsp = bsp;
 exports.default = 'default';
