@@ -6,3 +6,11 @@ document.getElementById('content').innerHTML = `<div class="container">Content c
 
 // const footer =
 document.getElementById('footer').innerHTML = `<div class="container">Footer Container</div>`;
+// console.log(hostname);
+console.log('Number of styles on the page:  ' + document.styleSheets.length);
+console.log(document.styleSheets);
+console.log('\n');
+
+console.log('Number of scripts on the page:  ' + document.scripts.length);
+console.log(document.scripts);
+console.log('\n');
