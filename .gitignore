@@ -1,2 +1,4 @@
 .ide
 node_modules
+site/data.js
+/.env
